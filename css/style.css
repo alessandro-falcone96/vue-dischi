@@ -2,6 +2,50 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+header{
+  height: 5vh;
+  background-color: #2E3A46;
+  display: flex;
+  align-items: center;
+}
+header img{
+  height: 70%;
+  margin-left: 15px;
+}
+main{
+  background-color: #1E2D3B;
+  height: 95vh;
+}
+#app{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  padding-top: 50px;
+}
+.card-album{
+  width: 150px;
+  background-color: #2E3A46;
+  margin: 15px;
+  text-align: center;
+}
+
+.card-album img{
+  width: 80%;
+  padding: 10px 0px;
+}
+.card-album h3{
+  color: white;
+  width: 80%;
+  margin: auto;
+  text-transform: uppercase;
+}
+.card-album h5{
+  color: grey;
+  padding: 10px 0px;
 }
 
 
@@ -16,5 +60,5 @@
 }
 
 @media screen and (max-width: 767px) {
-  
+
 }
