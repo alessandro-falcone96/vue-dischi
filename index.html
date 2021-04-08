@@ -22,11 +22,37 @@
 
       <div id="app">
 
-        <div class="card-album" v-for="disco in oggetti">
+        <div class="container-select">
 
-          <img :src="disco.poster" alt="">
-          <h3>{{disco.title}}</h3>
-          <h5>{{disco.author}} <br> {{disco.year}}</h5>
+          <label for="generi">Scegli un genere:</label>
+          <select class="generi" name="generi" v-model="selectedGenre">
+            <option v-for="genere in generi" :value="genere">{{genere}}</option>
+          </select>
+
+        </div>
+
+        <div class="container-album">
+
+          <div v-for="disco in oggetti">
+
+            <div class="card-album" v-if="disco.genre == selectedGenre">
+
+              <img :src="disco.poster" alt="">
+              <h3>{{disco.title}}</h3>
+              <h5>{{disco.author}} <br> {{disco.year}}</h5>
+
+            </div>
+
+            <div class="card-album" v-if="selectedGenre == generi[0]">
+
+              <img :src="disco.poster" alt="">
+              <h3>{{disco.title}}</h3>
+              <h5>{{disco.author}} <br> {{disco.year}}</h5>
+
+            </div>
+
+          </div>
+
 
         </div>
 

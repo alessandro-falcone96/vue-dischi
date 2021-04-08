@@ -7,7 +7,9 @@ var app = new Vue (
   {
     el: "#app",
     data: {
-      oggetti: []
+      oggetti: [],
+      generi: ["All"],
+      selectedGenre: "All"
     },
     mounted: function() {
       {
@@ -19,9 +21,12 @@ var app = new Vue (
 
             this.oggetti.push(oggetto[item]);
 
-          }
+            // Creo una lista di generi
+            if (this.generi.includes(oggetto[item].genre) == false) {
+              this.generi.push(oggetto[item].genre);
+            }
 
-          console.log(this.oggetti);
+          }
 
         })
       }

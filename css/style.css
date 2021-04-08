@@ -16,18 +16,27 @@ header img{
 }
 main{
   background-color: #1E2D3B;
-  height: 95vh;
+  min-height: 95vh;
 }
-#app{
+.container-select{
+  text-align: center;
+  padding-top: 25px;
+}
+.container-select label{
+  color: white;
+  margin-right: 5px;
+}
+.container-album{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 90%;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 15px;
 }
 .card-album{
   width: 150px;
+  min-height: 313px;
   background-color: #2E3A46;
   margin: 15px;
   text-align: center;
