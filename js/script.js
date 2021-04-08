@@ -28,6 +28,9 @@ var app = new Vue (
 
           }
 
+          // Ordino gli album per anno di uscita
+          this.oggetti.sort((a,b) => (a.year > b.year) ? 1 : -1);
+
         })
       }
     }
